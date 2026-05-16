@@ -193,20 +193,19 @@ export default function Home() {
             ].map((video, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30, rotate: i === 0 ? -2 : 2 }}
-                whileInView={{ opacity: 1, y: 0, rotate: i === 0 ? -1 : 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2, duration: 0.8 }}
-                className="relative aspect-[9/16] bg-brand-white/5 border border-white/10 overflow-hidden group rounded-[2rem] md:rounded-[3rem] shadow-2xl hover:scale-[1.02] transition-all duration-500"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: i * 0.2, duration: 0.8, ease: "easeOut" }}
+                className="relative aspect-[9/16] bg-brand-white/5 border border-white/10 overflow-hidden group rounded-[2rem] md:rounded-[3rem] shadow-2xl transition-all duration-500"
               >
                 <video
-                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   autoPlay
                   loop
                   muted
                   playsInline
                   preload="auto"
-                  style={{ transform: "translateZ(0)" }}
                 >
                   <source src={video.src} type="video/webm" />
                 </video>
