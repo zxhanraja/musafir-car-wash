@@ -4,7 +4,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check, Star, Sparkles, Handshake, Clock, Leaf } from "lucide-react";
+import { Check, Star, Award, Handshake, Clock, Leaf } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Preloader from "@/components/Preloader";
 
@@ -205,7 +205,8 @@ export default function Home() {
                   loop
                   muted
                   playsInline
-                  preload="none"
+                  preload="auto"
+                  style={{ transform: "translateZ(0)" }}
                 >
                   <source src={video.src} type="video/webm" />
                 </video>
@@ -262,7 +263,7 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-2 gap-8">
                 {[
-                  { title: "Premium Quality", Icon: Sparkles },
+                  { title: "Premium Quality", Icon: Award },
                   { title: "Expert Team", Icon: Handshake },
                   { title: "On-Time Service", Icon: Clock },
                   { title: "Eco Friendly", Icon: Leaf },

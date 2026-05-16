@@ -108,7 +108,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-4xl font-black uppercase text-brand-white hover:text-brand-red transition-colors tracking-widest"
+              className="text-2xl sm:text-3xl font-black uppercase text-brand-white hover:text-brand-red transition-colors tracking-widest"
             >
               {link.name}
             </Link>
@@ -116,7 +116,7 @@ export default function Navbar() {
           <Link
             href="#booking"
             onClick={() => setMobileMenuOpen(false)}
-            className="mt-8 px-10 py-5 bg-brand-white text-brand-black font-black uppercase tracking-[0.3em] text-xs hover:bg-brand-red hover:text-brand-white transition-colors"
+            className="mt-6 px-10 py-4 bg-brand-white text-brand-black font-black uppercase tracking-[0.3em] text-[10px] hover:bg-brand-red hover:text-brand-white transition-colors"
           >
             Book Now
           </Link>
