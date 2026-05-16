@@ -4,6 +4,11 @@ import Lenis from 'lenis'
 
 export default function SmoothScrolling({ children }: { children: ReactNode }) {
   useEffect(() => {
+    window.scrollTo(0, 0);
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
     const lenis = new Lenis({
       duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
