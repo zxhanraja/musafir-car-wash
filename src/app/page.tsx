@@ -107,6 +107,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            style={{ willChange: "transform, opacity" }}
           >
             <span className="inline-block px-3 py-1 bg-brand-red text-brand-white text-xs font-bold uppercase tracking-[0.2em] mb-6">
               Our Services
@@ -192,9 +194,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              style={{ willChange: "transform, opacity" }}
               className={cn(
-                "group relative bg-brand-white border p-6 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between min-h-[580px]",
+                "group relative bg-brand-white border p-6 flex flex-col justify-between min-h-[580px] transition-[border-color,box-shadow] duration-300",
                 service.popular ? "border-brand-red shadow-lg" : "border-brand-border"
               )}
             >
@@ -251,6 +255,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              style={{ willChange: "transform, opacity" }}
             >
               <h2 className="text-6xl md:text-[100px] font-black uppercase leading-none tracking-tighter mb-4">
                 OUR <span className="text-brand-red italic font-light">WORK</span>
@@ -265,11 +271,12 @@ export default function Home() {
             ].map((video, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: i * 0.2, duration: 0.8, ease: "easeOut" }}
-                className="relative aspect-[9/16] bg-brand-white/5 border border-white/10 overflow-hidden group rounded-[2rem] md:rounded-[3rem] shadow-2xl transition-all duration-500"
+                transition={{ delay: i * 0.15, duration: 0.7, ease: "easeOut" }}
+                style={{ willChange: "transform, opacity" }}
+                className="relative aspect-[9/16] bg-brand-white/5 border border-white/10 overflow-hidden group rounded-[2rem] md:rounded-[3rem] shadow-2xl"
               >
                 <video
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
@@ -301,9 +308,11 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             {/* Left Image */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              style={{ willChange: "transform, opacity" }}
               className="w-full lg:w-1/2 relative h-[400px] md:h-[500px] lg:h-[600px] bg-brand-black"
             >
               <Image
@@ -316,9 +325,11 @@ export default function Home() {
 
             {/* Right Content */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+              style={{ willChange: "transform, opacity" }}
               className="w-full lg:w-1/2"
             >
               <span className="inline-block px-3 py-1 bg-brand-red text-brand-white text-xs font-bold uppercase tracking-[0.2em] mb-6">
@@ -356,6 +367,8 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
         >
           <h2 className="text-4xl md:text-6xl lg:text-[80px] font-black uppercase leading-[0.9] tracking-tighter mb-24 max-w-4xl mx-auto">
             Why Drivers
@@ -375,8 +388,9 @@ export default function Home() {
               key={item.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+              style={{ willChange: "transform, opacity" }}
               className="flex flex-col items-center"
             >
               <span className="text-5xl md:text-7xl lg:text-8xl font-black text-brand-red tracking-tighter mb-4">{item.stat}</span>
@@ -406,9 +420,11 @@ export default function Home() {
           ].map((img, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.97 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.05 }}
+              style={{ willChange: "transform, opacity" }}
               className={cn("relative overflow-hidden bg-brand-light group cursor-pointer", img.span)}
             >
               <Image
@@ -429,6 +445,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            style={{ willChange: "transform, opacity" }}
           >
             <h2 className="text-5xl md:text-[64px] font-black uppercase leading-[0.95] tracking-tighter text-brand-black">
               Trusted by <span className="text-brand-red italic font-light">Thousands</span>
@@ -663,7 +681,9 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto flex flex-col items-center animate-fade-in"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
+          className="max-w-4xl mx-auto flex flex-col items-center"
         >
           <span className="text-[11px] font-black uppercase tracking-[0.4em] mb-4 text-brand-white/80">
             📍 Mobile Detailing Service &mdash; We Come To You
