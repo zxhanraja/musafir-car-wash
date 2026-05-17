@@ -20,14 +20,19 @@ export default function Footer() {
               Clean car. Better journey.
             </p>
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-brand-black hover:text-brand-red transition-colors font-bold uppercase tracking-widest text-sm">
+              <a 
+                href="https://www.instagram.com/musafir.brat" 
+                target="_blank"
+                rel="noreferrer"
+                className="text-brand-black hover:text-brand-red transition-colors font-bold uppercase tracking-widest text-sm"
+              >
                 Instagram
               </a>
-              <a href="#" className="text-brand-black hover:text-brand-red transition-colors font-bold uppercase tracking-widest text-sm">
-                Facebook
-              </a>
-              <a href="#" className="text-brand-black hover:text-brand-red transition-colors font-bold uppercase tracking-widest text-sm">
-                WhatsApp
+              <a 
+                href="tel:+13318067766" 
+                className="text-brand-black hover:text-brand-red transition-colors font-bold uppercase tracking-widest text-sm"
+              >
+                Call / Text
               </a>
             </div>
           </div>
@@ -52,9 +57,20 @@ export default function Footer() {
           <div className="flex flex-col">
             <h4 className="text-sm font-bold uppercase tracking-widest text-brand-black mb-6">Contact</h4>
             <div className="flex flex-col space-y-4 text-brand-black/70 text-lg font-medium">
-              <p>+91 98765 43210</p>
-              <p>info@musafircarwash.com</p>
-              <p>123 Luxury Avenue,<br/>Detailing District, City 400001</p>
+              <p className="hover:text-brand-red transition-colors">
+                <a href="tel:+13318067766">+1 (331) 806-7766</a>
+              </p>
+              <p className="hover:text-brand-red transition-colors">
+                <a href="https://www.instagram.com/musafir.brat" target="_blank" rel="noreferrer">
+                  @musafir.brat
+                </a>
+              </p>
+              <p className="leading-relaxed">
+                New York / NJ / Long Island<br/>
+                <span className="text-xs font-black uppercase tracking-wider text-brand-red bg-brand-red/5 px-2 py-0.5 rounded-sm border border-brand-red/10 inline-block mt-1">
+                  We Come To You 📍
+                </span>
+              </p>
             </div>
           </div>
         </div>
